@@ -1,0 +1,18 @@
+//You get an array of numbers, return the sum of all of the positives ones.
+//My solution
+function positiveSum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+//I had to iterate through the array and add every number greater than 0. I then retrurned the total.
+
+//Other solutions
+function positiveSum(arr) {
+   return arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);
+}
+const positiveSum = (arr) => arr.reduce((sum, n) => n > 0 ? sum + n : sum, 0);
